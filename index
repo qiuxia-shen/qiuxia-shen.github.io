@@ -1,0 +1,892 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="UTF-8">
+    <title>Awesome-pyecharts</title>
+                <script type="text/javascript" src="https://assets.pyecharts.org/assets/v5/echarts.min.js"></script>
+                <script type="text/javascript" src="myworld.js"></script>
+</head>
+<body >
+    <div id="274f2f0624b543ac9d8b175b456274bf" class="chart-container" style="width:900px; height:500px; "></div>
+    <script>
+        var chart_274f2f0624b543ac9d8b175b456274bf = echarts.init(
+            document.getElementById('274f2f0624b543ac9d8b175b456274bf'), 'white', {renderer: 'canvas'});
+        var option_274f2f0624b543ac9d8b175b456274bf = {
+    "baseOption": {
+        "series": [
+            {
+                "name":"进口数据",
+                "type": "map",
+                "label": {
+                    "show": false,
+                    "margin": 8
+                },
+                "map": "world",
+                "data": [
+                    {
+                        "name": "Australia",
+                        "value": 476.541
+                    },
+                    {
+                        "name": "Belgium",
+                        "value": 673.901
+                    },
+                    {
+                        "name": "Brazil",
+                        "value": 321.791
+                    },
+                    {
+                        "name": "Canada",
+                        "value": 764.723
+                    },
+                    {
+                        "name": "China",
+                        "value": 4766.664
+                    },
+                    {
+                        "name": "Croatia",
+                        "value": 70.914
+                    },
+                    {
+                        "name": "France",
+                        "value": 1295.06
+                    },
+                    {
+                        "name": "Germany",
+                        "value": 1883.085
+                    },
+                    {
+                        "name": "Greece",
+                        "value": 406.44
+                    },
+                    {
+                        "name": "India",
+                        "value": 2758.649
+                    },
+                    {
+                        "name": "Italy",
+                        "value": 1584.853
+                    },
+                    {
+                        "name": "Japan",
+                        "value": 3472.659
+                    },
+                    {
+                        "name": "Netherlands",
+                        "value": 1032.688
+                    },
+                    {
+                        "name": "Spain",
+                        "value": 1059.281
+                    },
+                    {
+                        "name": "Sweden",
+                        "value": 400.989
+                    },
+                    {
+                        "name": "Ukraine",
+                        "value": 155.725
+                    },
+                    {
+                        "name": "United Kingdom",
+                        "value": 962.522
+                    },
+                    {
+                        "name": "United States",
+                        "value": 9213.001
+                    }
+                ],
+                "roam": true,
+                "aspectScale": 0.75,
+                "nameProperty": "name",
+                "selectedMode": false,
+                "zoom": 1,
+                "zlevel": 0,
+                "z": 2,
+                "seriesLayoutBy": "column",
+                "datasetIndex": 0,
+                "mapValueCalculation": "sum",
+                "showLegendSymbol": true,
+                "emphasis": {},
+                "rippleEffect": {
+                    "show": true,
+                    "brushType": "stroke",
+                    "scale": 2.5,
+                    "period": 4
+                }
+            }
+        ],
+        "timeline": {
+            "axisType": "category",
+            "currentIndex": 0,
+            "orient": "horizontal",
+            "autoPlay": false,
+            "controlPosition": "left",
+            "loop": true,
+            "rewind": false,
+            "show": true,
+            "inverse": false,
+            "bottom": "-5px",
+            "progress": {},
+            "data": [
+                1995,
+                2000,
+                2005,
+                2010
+            ]
+        },
+        "visualMap": {
+            "show": true,
+            "type": "continuous",
+            "min": 0,
+            "max": 6000,
+            "inRange": {
+                "color": [
+                    "#50a3ba",
+                    "#eac763",
+                    "#d94e5d"
+                ]
+            },
+            "calculable": true,
+            "inverse": false,
+            "splitNumber": 5,
+            "hoverLink": true,
+            "orient": "vertical",
+            "padding": 5,
+            "showLabel": true,
+            "itemWidth": 20,
+            "itemHeight": 140,
+            "borderWidth": 0
+        },
+        "legend": [
+            {
+                "data": [
+                    ""
+                ],
+                "selected": {},
+                "show": true,
+                "padding": 5,
+                "itemGap": 10,
+                "itemWidth": 25,
+                "itemHeight": 14,
+                "backgroundColor": "transparent",
+                "borderColor": "#ccc",
+                "borderWidth": 1,
+                "borderRadius": 0,
+                "pageButtonItemGap": 5,
+                "pageButtonPosition": "end",
+                "pageFormatter": "{current}/{total}",
+                "pageIconColor": "#2f4554",
+                "pageIconInactiveColor": "#aaa",
+                "pageIconSize": 15,
+                "animationDurationUpdate": 800,
+                "selector": false,
+                "selectorPosition": "auto",
+                "selectorItemGap": 7,
+                "selectorButtonGap": 10
+            }
+        ]
+    },
+    "options": [
+        {
+            "series": [
+                {
+                    "type": "map",
+                    "label": {
+                        "show": false,
+                        "margin": 8
+                    },
+                    "map": "world",
+                    "data": [
+                        {
+                            "name": "Australia",
+                            "value": 279.517
+                        },
+                        {
+                            "name": "Belgium",
+                            "value": 531.347
+                        },
+                        {
+                            "name": "Brazil",
+                            "value": 503.343
+                        },
+                        {
+                            "name": "Canada",
+                            "value": 589.64
+                        },
+                        {
+                            "name": "China",
+                            "value": 342.736
+                        },
+                        {
+                            "name": "Croatia",
+                            "value": 84.411
+                        },
+                        {
+                            "name": "France",
+                            "value": 1557.089
+                        },
+                        {
+                            "name": "Germany",
+                            "value": 2040.663
+                        },
+                        {
+                            "name": "Greece",
+                            "value": 309.52
+                        },
+                        {
+                            "name": "India",
+                            "value": 557.327
+                        },
+                        {
+                            "name": "Italy",
+                            "value": 1491.903
+                        },
+                        {
+                            "name": "Japan",
+                            "value": 4552.797
+                        },
+                        {
+                            "name": "Netherlands",
+                            "value": 1098.978
+                        },
+                        {
+                            "name": "Spain",
+                            "value": 1109.094
+                        },
+                        {
+                            "name": "Sweden",
+                            "value": 370.156
+                        },
+                        {
+                            "name": "Ukraine",
+                            "value": 266.729
+                        },
+                        {
+                            "name": "United Kingdom",
+                            "value": 826.248
+                        },
+                        {
+                            "name": "United States",
+                            "value": 7230.023
+                        }
+                    ],
+                    "roam": true,
+                    "aspectScale": 0.75,
+                    "nameProperty": "name",
+                    "selectedMode": false,
+                    "zoom": 1,
+                    "zlevel": 0,
+                    "z": 2,
+                    "seriesLayoutBy": "column",
+                    "datasetIndex": 0,
+                    "mapValueCalculation": "sum",
+                    "showLegendSymbol": true,
+                    "emphasis": {},
+                    "rippleEffect": {
+                        "show": true,
+                        "brushType": "stroke",
+                        "scale": 2.5,
+                        "period": 4
+                    }
+                }
+            ],
+            "title": [
+                {
+                    "show": true,
+                    "text": "\u5168\u7403\u90e8\u5206\u56fd\u5bb6\u77f3\u6cb9\u7f8e\u5143\u8fdb\u53e3\u4ea4\u6613\u6570\u636e",
+                    "target": "blank",
+                    "subtext": "\u5355\u4f4d: \u5343\u6876\u6bcf\u65e5",
+                    "subtarget": "blank",
+                    "padding": 5,
+                    "itemGap": 10,
+                    "textAlign": "auto",
+                    "textVerticalAlign": "auto",
+                    "triggerEvent": false
+                }
+            ],
+            "tooltip": {
+                "show": true,
+                "trigger": "item",
+                "triggerOn": "mousemove|click",
+                "axisPointer": {
+                    "type": "line"
+                },
+                "showContent": true,
+                "alwaysShowContent": false,
+                "showDelay": 0,
+                "hideDelay": 100,
+                "enterable": false,
+                "confine": false,
+                "appendToBody": false,
+                "transitionDuration": 0.4,
+                "textStyle": {
+                    "fontSize": 14
+                },
+                "borderWidth": 0,
+                "padding": 5,
+                "order": "seriesAsc"
+            },
+            "visualMap": {
+                "show": true,
+                "type": "continuous",
+                "min": 0,
+                "max": 6000,
+                "inRange": {
+                    "color": [
+                        "#50a3ba",
+                        "#eac763",
+                        "#d94e5d"
+                    ]
+                },
+                "calculable": true,
+                "inverse": false,
+                "splitNumber": 5,
+                "hoverLink": true,
+                "orient": "vertical",
+                "padding": 5,
+                "showLabel": true,
+                "itemWidth": 20,
+                "itemHeight": 140,
+                "borderWidth": 0
+            },
+            "color": [
+                "#5470c6",
+                "#91cc75",
+                "#fac858",
+                "#ee6666",
+                "#73c0de",
+                "#3ba272",
+                "#fc8452",
+                "#9a60b4",
+                "#ea7ccc"
+            ]
+        },
+        {
+            "series": [
+                {
+                    "type": "map",
+                    "label": {
+                        "show": false,
+                        "margin": 8
+                    },
+                    "map": "world",
+                    "data": [
+                        {
+                            "name": "Australia",
+                            "value": 406.622
+                        },
+                        {
+                            "name": "Belgium",
+                            "value": 686.561
+                        },
+                        {
+                            "name": "Brazil",
+                            "value": 398.229
+                        },
+                        {
+                            "name": "Canada",
+                            "value": 918.076
+                        },
+                        {
+                            "name": "China",
+                            "value": 1409.15
+                        },
+                        {
+                            "name": "Croatia",
+                            "value": 78.28
+                        },
+                        {
+                            "name": "France",
+                            "value": 1725.65
+                        },
+                        {
+                            "name": "Germany",
+                            "value": 2094.985
+                        },
+                        {
+                            "name": "Greece",
+                            "value": 391.135
+                        },
+                        {
+                            "name": "India",
+                            "value": 1510.361
+                        },
+                        {
+                            "name": "Italy",
+                            "value": 1697.49
+                        },
+                        {
+                            "name": "Japan",
+                            "value": 4328.169
+                        },
+                        {
+                            "name": "Netherlands",
+                            "value": 1103.824
+                        },
+                        {
+                            "name": "Spain",
+                            "value": 1160.523
+                        },
+                        {
+                            "name": "Sweden",
+                            "value": 419.887
+                        },
+                        {
+                            "name": "Ukraine",
+                            "value": 116.3
+                        },
+                        {
+                            "name": "United Kingdom",
+                            "value": 986.732
+                        },
+                        {
+                            "name": "United States",
+                            "value": 9071.015
+                        }
+                    ],
+                    "roam": true,
+                    "aspectScale": 0.75,
+                    "nameProperty": "name",
+                    "selectedMode": false,
+                    "zoom": 1,
+                    "zlevel": 0,
+                    "z": 2,
+                    "seriesLayoutBy": "column",
+                    "datasetIndex": 0,
+                    "mapValueCalculation": "sum",
+                    "showLegendSymbol": true,
+                    "emphasis": {},
+                    "rippleEffect": {
+                        "show": true,
+                        "brushType": "stroke",
+                        "scale": 2.5,
+                        "period": 4
+                    }
+                }
+            ],
+            "title": [
+                {
+                    "show": true,
+                    "text": "\u5168\u7403\u90e8\u5206\u56fd\u5bb6\u77f3\u6cb9\u7f8e\u5143\u8fdb\u53e3\u4ea4\u6613\u6570\u636e",
+                    "target": "blank",
+                    "subtext": "\u5355\u4f4d: \u5343\u6876\u6bcf\u65e5",
+                    "subtarget": "blank",
+                    "padding": 5,
+                    "itemGap": 10,
+                    "textAlign": "auto",
+                    "textVerticalAlign": "auto",
+                    "triggerEvent": false
+                }
+            ],
+            "tooltip": {
+                "show": true,
+                "trigger": "item",
+                "triggerOn": "mousemove|click",
+                "axisPointer": {
+                    "type": "line"
+                },
+                "showContent": true,
+                "alwaysShowContent": false,
+                "showDelay": 0,
+                "hideDelay": 100,
+                "enterable": false,
+                "confine": false,
+                "appendToBody": false,
+                "transitionDuration": 0.4,
+                "textStyle": {
+                    "fontSize": 14
+                },
+                "borderWidth": 0,
+                "padding": 5,
+                "order": "seriesAsc"
+            },
+            "visualMap": {
+                "show": true,
+                "type": "continuous",
+                "min": 0,
+                "max": 6000,
+                "inRange": {
+                    "color": [
+                        "#50a3ba",
+                        "#eac763",
+                        "#d94e5d"
+                    ]
+                },
+                "calculable": true,
+                "inverse": false,
+                "splitNumber": 5,
+                "hoverLink": true,
+                "orient": "vertical",
+                "padding": 5,
+                "showLabel": true,
+                "itemWidth": 20,
+                "itemHeight": 140,
+                "borderWidth": 0
+            },
+            "color": [
+                "#5470c6",
+                "#91cc75",
+                "#fac858",
+                "#ee6666",
+                "#73c0de",
+                "#3ba272",
+                "#fc8452",
+                "#9a60b4",
+                "#ea7ccc"
+            ]
+        },
+        {
+            "series": [
+                {
+                    "type": "map",
+                    "label": {
+                        "show": false,
+                        "margin": 8
+                    },
+                    "map": "world",
+                    "data": [
+                        {
+                            "name": "Australia",
+                            "value": 405.249
+                        },
+                        {
+                            "name": "Belgium",
+                            "value": 645.41
+                        },
+                        {
+                            "name": "Brazil",
+                            "value": 338.217
+                        },
+                        {
+                            "name": "Canada",
+                            "value": 917.171
+                        },
+                        {
+                            "name": "China",
+                            "value": 2543.289
+                        },
+                        {
+                            "name": "Croatia",
+                            "value": 80.199
+                        },
+                        {
+                            "name": "France",
+                            "value": 1701.561
+                        },
+                        {
+                            "name": "Germany",
+                            "value": 2267.799
+                        },
+                        {
+                            "name": "Greece",
+                            "value": 377.566
+                        },
+                        {
+                            "name": "India",
+                            "value": 1943.309
+                        },
+                        {
+                            "name": "Italy",
+                            "value": 1807.003
+                        },
+                        {
+                            "name": "Japan",
+                            "value": 4185.877
+                        },
+                        {
+                            "name": "Netherlands",
+                            "value": 1056.171
+                        },
+                        {
+                            "name": "Spain",
+                            "value": 1202.299
+                        },
+                        {
+                            "name": "Sweden",
+                            "value": 405.814
+                        },
+                        {
+                            "name": "Ukraine",
+                            "value": 292.379
+                        },
+                        {
+                            "name": "United Kingdom",
+                            "value": 1054.334
+                        },
+                        {
+                            "name": "United States",
+                            "value": 10126.055
+                        }
+                    ],
+                    "roam": true,
+                    "aspectScale": 0.75,
+                    "nameProperty": "name",
+                    "selectedMode": false,
+                    "zoom": 1,
+                    "zlevel": 0,
+                    "z": 2,
+                    "seriesLayoutBy": "column",
+                    "datasetIndex": 0,
+                    "mapValueCalculation": "sum",
+                    "showLegendSymbol": true,
+                    "emphasis": {},
+                    "rippleEffect": {
+                        "show": true,
+                        "brushType": "stroke",
+                        "scale": 2.5,
+                        "period": 4
+                    }
+                }
+            ],
+            "title": [
+                {
+                    "show": true,
+                    "text": "\u5168\u7403\u90e8\u5206\u56fd\u5bb6\u77f3\u6cb9\u7f8e\u5143\u8fdb\u53e3\u4ea4\u6613\u6570\u636e",
+                    "target": "blank",
+                    "subtext": "\u5355\u4f4d: \u5343\u6876\u6bcf\u65e5",
+                    "subtarget": "blank",
+                    "padding": 5,
+                    "itemGap": 10,
+                    "textAlign": "auto",
+                    "textVerticalAlign": "auto",
+                    "triggerEvent": false
+                }
+            ],
+            "tooltip": {
+                "show": true,
+                "trigger": "item",
+                "triggerOn": "mousemove|click",
+                "axisPointer": {
+                    "type": "line"
+                },
+                "showContent": true,
+                "alwaysShowContent": false,
+                "showDelay": 0,
+                "hideDelay": 100,
+                "enterable": false,
+                "confine": false,
+                "appendToBody": false,
+                "transitionDuration": 0.4,
+                "textStyle": {
+                    "fontSize": 14
+                },
+                "borderWidth": 0,
+                "padding": 5,
+                "order": "seriesAsc"
+            },
+            "visualMap": {
+                "show": true,
+                "type": "continuous",
+                "min": 0,
+                "max": 6000,
+                "inRange": {
+                    "color": [
+                        "#50a3ba",
+                        "#eac763",
+                        "#d94e5d"
+                    ]
+                },
+                "calculable": true,
+                "inverse": false,
+                "splitNumber": 5,
+                "hoverLink": true,
+                "orient": "vertical",
+                "padding": 5,
+                "showLabel": true,
+                "itemWidth": 20,
+                "itemHeight": 140,
+                "borderWidth": 0
+            },
+            "color": [
+                "#5470c6",
+                "#91cc75",
+                "#fac858",
+                "#ee6666",
+                "#73c0de",
+                "#3ba272",
+                "#fc8452",
+                "#9a60b4",
+                "#ea7ccc"
+            ]
+        },
+        {
+            "series": [
+                {
+                    "type": "map",
+                    "label": {
+                        "show": false,
+                        "margin": 8
+                    },
+                    "map": "world",
+                    "data": [
+                        {
+                            "name": "Australia",
+                            "value": 476.541
+                        },
+                        {
+                            "name": "Belgium",
+                            "value": 673.901
+                        },
+                        {
+                            "name": "Brazil",
+                            "value": 321.791
+                        },
+                        {
+                            "name": "Canada",
+                            "value": 764.723
+                        },
+                        {
+                            "name": "China",
+                            "value": 4766.664
+                        },
+                        {
+                            "name": "Croatia",
+                            "value": 70.914
+                        },
+                        {
+                            "name": "France",
+                            "value": 1295.06
+                        },
+                        {
+                            "name": "Germany",
+                            "value": 1883.085
+                        },
+                        {
+                            "name": "Greece",
+                            "value": 406.44
+                        },
+                        {
+                            "name": "India",
+                            "value": 2758.649
+                        },
+                        {
+                            "name": "Italy",
+                            "value": 1584.853
+                        },
+                        {
+                            "name": "Japan",
+                            "value": 3472.659
+                        },
+                        {
+                            "name": "Netherlands",
+                            "value": 1032.688
+                        },
+                        {
+                            "name": "Spain",
+                            "value": 1059.281
+                        },
+                        {
+                            "name": "Sweden",
+                            "value": 400.989
+                        },
+                        {
+                            "name": "Ukraine",
+                            "value": 155.725
+                        },
+                        {
+                            "name": "United Kingdom",
+                            "value": 962.522
+                        },
+                        {
+                            "name": "United States",
+                            "value": 9213.001
+                        }
+                    ],
+                    "roam": true,
+                    "aspectScale": 0.75,
+                    "nameProperty": "name",
+                    "selectedMode": false,
+                    "zoom": 1,
+                    "zlevel": 0,
+                    "z": 2,
+                    "seriesLayoutBy": "column",
+                    "datasetIndex": 0,
+                    "mapValueCalculation": "sum",
+                    "showLegendSymbol": true,
+                    "emphasis": {},
+                    "rippleEffect": {
+                        "show": true,
+                        "brushType": "stroke",
+                        "scale": 2.5,
+                        "period": 4
+                    }
+                }
+            ],
+            "title": [
+                {
+                    "show": true,
+                    "text": "\u5168\u7403\u90e8\u5206\u56fd\u5bb6\u77f3\u6cb9\u7f8e\u5143\u8fdb\u53e3\u4ea4\u6613\u6570\u636e",
+                    "target": "blank",
+                    "subtext": "\u5355\u4f4d: \u5343\u6876\u6bcf\u65e5",
+                    "subtarget": "blank",
+                    "padding": 5,
+                    "itemGap": 10,
+                    "textAlign": "auto",
+                    "textVerticalAlign": "auto",
+                    "triggerEvent": false
+                }
+            ],
+            "tooltip": {
+                "show": true,
+                "trigger": "item",
+                "triggerOn": "mousemove|click",
+                "axisPointer": {
+                    "type": "line"
+                },
+                "showContent": true,
+                "alwaysShowContent": false,
+                "showDelay": 0,
+                "hideDelay": 100,
+                "enterable": false,
+                "confine": false,
+                "appendToBody": false,
+                "transitionDuration": 0.4,
+                "textStyle": {
+                    "fontSize": 14
+                },
+                "borderWidth": 0,
+                "padding": 5,
+                "order": "seriesAsc"
+            },
+            "visualMap": {
+                "show": true,
+                "type": "continuous",
+                "min": 0,
+                "max": 6000,
+                "inRange": {
+                    "color": [
+                        "#50a3ba",
+                        "#eac763",
+                        "#d94e5d"
+                    ]
+                },
+                "calculable": true,
+                "inverse": false,
+                "splitNumber": 5,
+                "hoverLink": true,
+                "orient": "vertical",
+                "padding": 5,
+                "showLabel": true,
+                "itemWidth": 20,
+                "itemHeight": 140,
+                "borderWidth": 0
+            },
+            "color": [
+                "#5470c6",
+                "#91cc75",
+                "#fac858",
+                "#ee6666",
+                "#73c0de",
+                "#3ba272",
+                "#fc8452",
+                "#9a60b4",
+                "#ea7ccc"
+            ]
+        }
+    ]
+};
+        chart_274f2f0624b543ac9d8b175b456274bf.setOption(option_274f2f0624b543ac9d8b175b456274bf);
+    </script>
+</body>
+</html>
