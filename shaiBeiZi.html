@@ -1,0 +1,180 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+	<meta charset="UTF-8">
+	<meta http-equiv="X-UA-Compatible" content="IE=edge">
+	<meta name="viewport" content="width=device-width, initial-scale=1.0">
+	<title>晒被子模拟器</title>
+	<script src="./Build/Cesium/Cesium.js"></script>
+	<link rel="stylesheet" href="./Build/Cesium/Widgets/widgets.css">
+	<link href="./src/css/layui.css" rel="stylesheet">
+	<script src="https://webapi.amap.com/maps?v=1.4.15&key=5d351cc8a31ea33b2149020c39396bd4"></script>
+	<style>
+		html,
+		body,
+		#cesiumContainer {
+			width: 100%;
+			height: 820px;
+			margin: 0;
+			padding: 0;
+			overflow: hidden;
+		}
+
+		.toolbar {
+			position: absolute;
+			top: 10px;
+			left: 20px;
+			background-color: rgba(0, 0, 0, 0);
+		}
+	</style>
+</head>
+<body>
+	<script src="./src/layui.js"></script>
+	<div class="layui-layout layui-layout-admin">
+		<!--头部-->
+		<div class="layui-header">
+			<div class="layui-logo layui-hide-xs layui-bg-black">晒被子模拟器 V1.0</div>
+				<span class="layui-badge-dot layui-bg-orange"></span>
+				<span class="layui-badge-dot layui-bg-green"></span>
+				<span class="layui-badge-dot layui-bg-cyan"></span>
+				<span class="layui-badge-dot layui-bg-blue"></span>
+				<span class="layui-badge-dot layui-bg-black"></span>
+				<span class="layui-badge-dot layui-bg-gray"></span>
+		</div>
+		<!--左侧导航栏-->
+		<div class="layui-side layui-bg-black">
+			<div class="layui-side-scroll">
+				<ul class="layui-nav layui-nav-tree" lay-filter="test">
+					<li class="layui-nav-item" id = 'shadow'><a href="javascript:;">阴影分析</a></li>
+					<li class="layui-nav-item" id = 'manage'><a href="javascript:;">晾晒管理</a></li>
+					<li class="layui-nav-item" id = 'route'><a href="javascript:;">路径规划</a></li>
+					<li class="layui-nav-item" id = 'drive'><a href="javascript:;"></a></li>
+				</ul>
+				<!--空位置添加天气预报-->
+				<div class="layui-card" id = "tiqnqi" style="position: relative;left: 2%;width: 88%;">
+					<div class="layui-card-header" style="text-align: center;">天气</div>
+					<div class="layui-card-body" style="color:black;">
+						当前城市：
+						<div class="layui-inline">
+							<input type="text" id = "position" name="Ktime" lay-verify="required" autocomplete="off" class="layui-input">
+						</div>
+						<div class="layui-inline">
+							<button type="submit" class="layui-btn layui-btn-primary" lay-submit lay-filter="demo1" onclick="choosePosition()" style="position: relative;left:0%;width: 175%;">点选位置</button>
+						</div>
+						<div class="layui-inline" id = "weatherInfo">
+						</div>
+						<div class="layui-inline">
+							<button type="submit" class="layui-btn" lay-submit lay-filter="demo1" onclick="weather()" style="position: relative;left:0%;width: 175%;">查询天气</button>
+						</div>
+						<div class="layui-inline">
+							<button type="submit" class="layui-btn layui-btn-primary" lay-submit lay-filter="demo1" onclick="openWeather()" style="position: relative;left:0%;width: 100%;">可视化</button>
+						</div>
+						<div class="layui-inline">
+							<button type="submit" class="layui-btn layui-btn-primary" lay-submit lay-filter="demo1" onclick="closeWeather()" style="position: relative;left:0%;width: 120%;">关闭</button>
+						</div>
+					</div>
+				</div>
+			</div>
+		</div>
+
+		<!--主体-->
+		<div class="layui-body" style="height: 100%;" lay-on="test-iframe-handle">
+			<div class="layui-panel">
+				<!--阴影分析菜单-->
+				<div class="layui-card" id = "shadowMenu" style="position:fixed; top:60px; left:200px;z-index: 999;display: none;">
+					<div class="layui-card-header">阴影分析</div>
+					<div class="layui-card-body">
+						<div class="layui-inline">
+							<label class="layui-form-label">查询日期</label>
+							<div class="layui-input-inline layui-input-wrap">
+							  	<div class="layui-input-prefix">
+									<i class="layui-icon layui-icon-date"></i>
+							  	</div>
+							  <input type="text" name="date" id="Date" lay-verify="date" placeholder="yyyy-MM-dd" autocomplete="off" class="layui-input">
+							</div>
+						  </div>
+						<div class="layui-form-item">
+							<label class="layui-form-label">查询时间</label>
+							<div class="layui-input-block">
+								<input type="text" id = "Ktime" name="Ktime" lay-verify="required" placeholder="请输入1-24时" autocomplete="off" class="layui-input">
+							</div>
+						</div>
+						<div class="layui-form-item">
+							<label class="layui-form-label">停止时间</label>
+							<div class="layui-input-block">
+								<input type="text" id = "Ttime" name="Ttime" lay-verify="required" placeholder="请输入1-24时（选填）" autocomplete="off" class="layui-input">
+							</div>
+						</div>
+						<div class="layui-form-item">
+							<div class="layui-input-block">
+							  <button type="submit" class="layui-btn" lay-submit lay-filter="demo1" onclick="start()">开始分析</button>
+							  <button type="reset" class="layui-btn layui-btn-primary" onclick="cancel()">停止分析</button>
+							</div>
+						  </div>
+					</div>
+				</div>
+				<!--晾晒管理菜单-->
+				<div class="layui-card" id = "manageMenu" style="position:fixed; top:60px; left:200px;z-index: 999;display: none;">
+					<div class="layui-card-header">晾晒管理</div>
+					<div class="layui-card-body">
+						<div class="layui-inline">
+							晾晒点信息
+							<!--晾晒点信息-->
+							<table class="layui-hide" id="ID-table-demo-data" style="height: 30%;"></table>
+						</div>
+						<div class="layui-row">
+							<!--晾晒点信息-->
+							<button type="reset" class="layui-btn " style="width: 100px;" lay-event="search" onclick="search()">查询</button>
+							<button type="reset" class="layui-btn " style="position:absolute;right: 40%;width: 100px;" lay-event="liangShai" onclick="liangShai()">晾晒</button>
+							<button type="reset" class="layui-btn " style="position:absolute;right: 5%;width: 100px;" lay-event="cheXia" onclick="cheXia()">撤下</button>
+						</div>
+					</div>
+				</div>
+
+				<!--路径规划窗体-->
+				<div class="layui-card" id = "routeMenu" style="position:fixed; top:60px; left:200px;z-index: 999;display: none;">
+					<div class="layui-card-header">路径规划</div>
+					<div class="layui-card-body">
+						<div class="layui-row">
+							<button type="reset" class="layui-btn " style="width: 100px;" onclick="beginCal()">开始规划</button>
+							<button type="reset" class="layui-btn layui-btn-primary" style="width: 100px;" onclick="endCal()">关闭</button>
+						</div>
+					</div>
+				</div>
+
+				<div id="cesiumContainer" style="z-index: 1;"></div>
+			</div>
+		</div>
+		<!--底部固定区域-->
+		<div class="layui-footer">
+			<div class="layui-inline">
+				<div id = "coords">
+			</div>
+		</div>
+	</div>
+	<script src="https://unpkg.com/gcoord/dist/gcoord.global.prod.js"></script>
+	<script src = "shaiBeiZi.js"></script>
+	<script>
+		// 注册layui的操作
+		layui.use(['form', 'laydate', 'util'], function(){
+		var form = layui.form;
+		var layer = layui.layer;
+		var laydate = layui.laydate;
+		var util = layui.util;
+		
+		// 提交事件
+		form.on('submit(demo1)', function(data){
+			var field = data.field; // 获取表单字段值
+			return false; // 阻止默认 form 跳转
+		});
+		
+		// 日期
+		laydate.render({
+			elem: '#Date'
+		});
+		});
+
+	</script>
+</body>
+</html>
