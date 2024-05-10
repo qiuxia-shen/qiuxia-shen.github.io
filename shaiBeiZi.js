@@ -451,7 +451,6 @@ function search(){
     console.log(viewer.dataSources._dataSources[0])
     // 查询实体
     var myentities = []
-
     for(var i = 0; i < entities.length; i++){
         var entity = entities[i];
         var zutuan = entity.properties.组团号
@@ -665,6 +664,15 @@ function geocodeLocation(location) {
 function openWeather(){
     weather()
 }
+
+/*测试小雨
+smallrainEffect = new Cesium.RainEffect(viewer, {
+    tiltAngle: -.5,
+    rainSize: 0.2,
+    rainSpeed: 300.0
+});
+smallrainEffect.show(true);
+*/
 
 // 关闭可视化
 function closeWeather(){
